@@ -1,0 +1,20 @@
+InetGet("http://epg.it999.ru/epg.xml", "E:\epg.xml")
+SLEEP(200)
+$sTextFile = "E:\epg.xml"
+Run ( "notepad.exe " & $sTextFile, @WindowsDir, @SW_MAXIMIZE )
+SLEEP(100)
+SEND("^h")
+SEND('<channel id="6395">')
+SEND("{tab}")
+SEND("TEST")
+SEND("{tab}")
+SEND("{tab}")
+SEND("{tab}")
+SEND("{tab}")
+SEND("{tab}")
+SEND("{ENTER}")
+SEND("{ESC}")
+SEND("^s")
+SEND( "!{F4}")
+
+
